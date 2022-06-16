@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { EventrixProvider } from 'eventrix';
+import eventrix from './eventrix/index';
+import Logo from './components/Logo';
+import Chairs from './components/Chairs';
+import Desks from './components/Desks';
+import Wardrobes from './components/Wardrobes';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <EventrixProvider eventrix={eventrix}>
+            <div className='app'>
+                <Logo />
+                <div className='items'>
+                    <Chairs />
+                    <Desks />
+                    <Wardrobes />
+                </div>
+            </div>
+        </EventrixProvider>
+    );
 }
 
 export default App;
