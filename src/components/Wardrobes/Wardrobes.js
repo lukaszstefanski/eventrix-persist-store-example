@@ -2,7 +2,7 @@ import React from 'react';
 import { useEventrixState, useEmit } from 'eventrix';
 import Button from '../Button';
 import Quantity from '../Quantity';
-import { ADD_WARDROBE} from '../../eventrix/wardrobes';
+import { ADD_WARDROBE} from '../../eventrix/receivers/wardrobes';
 
 const Wardrobes = () => {
     const wardrobes = useEventrixState('wardrobes');

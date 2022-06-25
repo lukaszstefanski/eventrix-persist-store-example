@@ -2,7 +2,7 @@ import React from 'react';
 import { useEventrixState, useEmit } from 'eventrix';
 import Button from '../Button';
 import Quantity from '../Quantity';
-import { ADD_DESK } from '../../eventrix/desks';
+import { ADD_DESK } from '../../eventrix/receivers/desks';
 
 const Desks = () => {
     const desks = useEventrixState('desks');
